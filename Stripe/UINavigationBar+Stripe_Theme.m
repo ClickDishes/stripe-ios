@@ -31,7 +31,7 @@ static NSInteger const STPNavigationBarHairlineViewTag = 787473;
 
     [self stp_artificialHairlineView].backgroundColor = theme.tertiaryBackgroundColor;
     self.barTintColor = theme.secondaryBackgroundColor;
-    self.tintColor = theme.accentColor;
+    self.tintColor = UIColor.whiteColor;
     self.barStyle = theme.barStyle;
     self.translucent = theme.translucentNavigationBar;
     self.titleTextAttributes = @{
