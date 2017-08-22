@@ -34,12 +34,12 @@
     UIImage *image = [self backgroundImageForState:UIControlStateNormal barMetrics:UIBarMetricsDefault];
     if (image) {
         UIImage *enabledImage = [STPImageLibrary imageWithTintColor:UIColor.whiteColor forImage:image];
-        UIImage *disabledImage = [STPImageLibrary imageWithTintColor:UIColor.clearColor forImage:image];
+        UIImage *disabledImage = [STPImageLibrary imageWithTintColor:UIColor.whiteColor forImage:image];
         [self setBackgroundImage:enabledImage forState:UIControlStateNormal barMetrics:UIBarMetricsDefault];
         [self setBackgroundImage:disabledImage forState:UIControlStateDisabled barMetrics:UIBarMetricsDefault];
     }
     
-    self.tintColor = self.enabled ? UIColor.whiteColor : UIColor.clearColor;
+    self.tintColor = self.enabled ? UIColor.whiteColor : UIColor.whiteColor;
     [self setTitleTextAttributes:@{
                                    NSFontAttributeName: self.style == UIBarButtonItemStylePlain ? theme.font : theme.emphasisFont,
                                    NSForegroundColorAttributeName: UIColor.whiteColor,
@@ -47,7 +47,7 @@
                         forState:UIControlStateNormal];
     [self setTitleTextAttributes:@{
                                    NSFontAttributeName: self.style == UIBarButtonItemStylePlain ? theme.font : theme.emphasisFont,
-                                   NSForegroundColorAttributeName: UIColor.clearColor,
+                                   NSForegroundColorAttributeName: UIColor.whiteColor,
                                    }
                         forState:UIControlStateDisabled];
 }
