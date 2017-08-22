@@ -39,15 +39,15 @@
         [self setBackgroundImage:disabledImage forState:UIControlStateDisabled barMetrics:UIBarMetricsDefault];
     }
     
-    self.tintColor = self.enabled ? theme.accentColor : theme.secondaryForegroundColor;
+    self.tintColor = self.enabled ? UIColor.whiteColor : UIColor.clearColor;
     [self setTitleTextAttributes:@{
                                    NSFontAttributeName: self.style == UIBarButtonItemStylePlain ? theme.font : theme.emphasisFont,
-                                   NSForegroundColorAttributeName: theme.accentColor,
+                                   NSForegroundColorAttributeName: UIColor.whiteColor,
                                    }
                         forState:UIControlStateNormal];
     [self setTitleTextAttributes:@{
                                    NSFontAttributeName: self.style == UIBarButtonItemStylePlain ? theme.font : theme.emphasisFont,
-                                   NSForegroundColorAttributeName: theme.secondaryForegroundColor,
+                                   NSForegroundColorAttributeName: UIColor.clearColor,
                                    }
                         forState:UIControlStateDisabled];
 }
